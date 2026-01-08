@@ -1,0 +1,1880 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Completo - Truque do Limão</title>
+
+  <!-- ========== PRELOAD VTURB PARA MELHOR CARREGAMENTO ========== -->
+  <!-- 
+  ╔═══════════════════════════════════════════════════════════════╗
+  ║  🎥 PARA TROCAR O VÍDEO: Substitua "695f2058766bc0a605c5e7fa" ║
+  ║  nas 2 linhas abaixo pelo ID do seu novo vídeo               ║
+  ╚═══════════════════════════════════════════════════════════════╝
+  -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/695f2058766bc0a605c5e7fa/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/695f2052cfc03f538c2b18ed/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+  <!-- ========== PIXEL DO FACEBOOK - COLE SEU CÓDIGO AQUI ========== -->
+  <!-- 
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+  </noscript>
+  -->
+
+  <!-- ========== GOOGLE TAG MANAGER - COLE SEU CÓDIGO AQUI ========== -->
+  <!--
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+
+  <!-- ========== GOOGLE ANALYTICS 4 - COLE SEU CÓDIGO AQUI ========== -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <style>
+    :root{
+      --green:#15a24f;
+      --green-dark:#0f8f4a;
+      --green-2:#20c064;
+      --soft:#eefcf3;
+      --line:#d9dde2;
+      --text:#0f172a;
+      --muted:#64748b;
+      --bg:#f3f4f6;
+      --radius:16px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    /* Moldura / coluna central */
+    .page{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      padding:24px 14px;
+    }
+    .wrap{
+      width:100%;
+      max-width:520px;
+      background:#fff;
+      padding:34px 28px 26px;
+      border:1px solid rgba(15,23,42,.06);
+    }
+    @media (max-width:520px){
+      .wrap{ max-width:100%; padding:24px 16px 18px; }
+    }
+
+    /* Topo: imagem/placeholder */
+    .brand{
+      display:flex;
+      justify-content:center;
+      margin-top:6px;
+      margin-bottom:18px;
+    }
+    .brand img{
+      max-width:240px;
+      width:40%;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+    .brand .placeholder{
+      width:240px;
+      height:72px;
+      border:2px dashed rgba(21,162,79,.35);
+      background:rgba(21,162,79,.06);
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:rgba(15,143,74,.75);
+      text-align:center;
+      padding:8px;
+      font-size:13px;
+      line-height:1.2;
+    }
+
+    /* Barra de progresso */
+    .progress-track{
+      height:6px;
+      background:var(--line);
+      border-radius:999px;
+      overflow:hidden;
+      margin:10px 0 18px;
+    }
+    .progress-bar{
+      height:100%;
+      width:0%;
+      background:var(--green);
+      border-radius:999px;
+      transition:width .25s ease;
+    }
+
+    /* Subheader da etapa 8 */
+    .mini-head{
+      text-align:center;
+      margin:2px 0 10px;
+      line-height:1.2;
+    }
+    .mini-head .a{
+      font-size:14px;
+      font-weight:700;
+      color:#0f172a;
+    }
+    .mini-head .b{
+      font-size:14px;
+      font-weight:900;
+      color:var(--green);
+      margin-top:2px;
+    }
+
+    /* Títulos */
+    h1{
+      margin:0;
+      font-size:30px;
+      line-height:1.18;
+      letter-spacing:-.6px;
+      text-align:center;
+      font-weight:900;
+    }
+    @media (max-width:520px){ h1{ font-size:26px; } }
+
+    .hl{ color:var(--green); }
+    .red{ color:#e11d48; }
+
+    .subtitle{
+      margin:12px auto 22px;
+      text-align:center;
+      color:#475569;
+      font-size:15px;
+      line-height:1.55;
+      font-style:italic;
+      max-width:420px;
+    }
+    @media (max-width:520px){ .subtitle{ font-size:14px; } }
+
+    /* Listas/cards */
+    .options{ display:flex; flex-direction:column; gap:14px; margin-top:10px; }
+
+    /* Card padrão com seta */
+    .opt{
+      width:100%;
+      text-align:left;
+      background:#eefcf3;
+      border:1px solid #15a24f;
+      border-radius:var(--radius);
+      padding:18px 16px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      transition:transform .05s ease, filter .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .opt:hover{ 
+      background:#e0f7e9;
+      border-color:#0f8f4a; 
+    }
+    .opt:active{ transform:scale(.995); }
+
+    .opt .label{
+      color:#0f172a;
+      font-size:16px;
+      font-weight:500;
+      line-height:1.3;
+      flex:1;
+    }
+    .opt .arrow{
+      color:var(--green);
+      font-size:24px;
+      font-weight:900;
+      line-height:1;
+      margin-left:auto;
+    }
+
+    /* Card com ícone à esquerda (emoji ou imagem) */
+    .left-ico{
+      width:34px; height:34px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+    }
+    .left-ico.emoji{
+      font-size:20px;
+      background:rgba(21,162,79,.06);
+      border:1px solid rgba(21,162,79,.18);
+    }
+    .left-ico img{
+      width:34px; height:34px;
+      object-fit:cover;
+      border-radius:10px;
+      border:1px solid rgba(15,23,42,.10);
+      background:#fff;
+    }
+
+    /* Card "sem seta" */
+    .opt.no-arrow .arrow{ display:none; }
+
+    /* Card com título + descrição */
+    .card-title{
+      font-size:15.5px;
+      font-weight:800;
+      color:#0f172a;
+      margin:0;
+    }
+    .card-desc{
+      font-size:12.8px;
+      color:#6b7280;
+      margin-top:4px;
+      line-height:1.35;
+      font-weight:500;
+    }
+
+    /* Input */
+    .center-block{ text-align:center; }
+    .input{
+      width:100%;
+      max-width:440px;
+      height:52px;
+      border-radius:999px;
+      border:1px solid #cfd6dd;
+      padding:0 18px;
+      font-size:16px;
+      outline:none;
+      background:#fff;
+      margin:14px auto 14px;
+      display:block;
+    }
+    .hint{
+      max-width:440px;
+      margin:0 auto 18px;
+      font-size:13px;
+      color:#64748b;
+      line-height:1.45;
+    }
+
+    .btn{
+      width:100%;
+      max-width:440px;
+      height:56px;
+      border-radius:999px;
+      border:none;
+      background:var(--green);
+      color:#fff;
+      font-weight:900;
+      font-size:16px;
+      cursor:pointer;
+      display:block;
+      margin:0 auto;
+      box-shadow: 0 12px 22px rgba(21,162,79,.18);
+      transition:transform .05s ease, filter .12s ease, opacity .12s ease;
+    }
+    .btn:active{ transform:scale(.995); }
+    .btn:disabled{
+      opacity:.45;
+      cursor:not-allowed;
+      box-shadow:none;
+    }
+
+    /* Tela 8 */
+    .big-title{
+      text-align:center;
+      font-weight:1000;
+      letter-spacing:-.6px;
+      font-size:34px;
+      margin:22px 0 8px;
+      line-height:1.12;
+      color:var(--green);
+    }
+    @media (max-width:520px){ .big-title{ font-size:28px; } }
+
+    .big-title .black{ color:#0f172a; font-weight:1000; }
+
+    .mid-image{
+      width:100%;
+      max-width:520px;
+      margin:14px auto 10px;
+      height:500px;
+      border-radius:18px;
+      border:2px dashed rgba(21,162,79,.35);
+      background:rgba(21,162,79,.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:16px;
+      font-weight:900;
+      color:rgba(15,143,74,.75);
+      font-size:14px;
+      line-height:1.3;
+    }
+    @media (max-width:520px){ .mid-image{ height:260px; } }
+
+    .footline{
+      text-align:center;
+      font-size:14px;
+      line-height:1.4;
+      margin:12px auto 18px;
+      max-width:440px;
+    }
+    .footline .g{ color:var(--green); font-weight:900; }
+    .footline .r{ color:#e11d48; font-weight:900; }
+
+    /* ESTILOS ETAPAS 9-19 */
+    .hidden{ display:none !important; }
+
+    /* opções tipo "lista com ícone + checkbox" (etapa 9) */
+    .checklist{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:10px;
+      margin-bottom:14px;
+    }
+    .check-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border:1px solid #15a24f;
+      border-radius:16px;
+      padding:12px 12px;
+      background:#eefcf3;
+      cursor:pointer;
+      transition: background .12s ease, border-color .12s ease;
+    }
+    .check-row:hover{
+      background:#e0f7e9;
+      border-color:#0f8f4a;
+    }
+    .check-left{
+      display:flex; align-items:center; gap:12px;
+      font-size:14px; font-weight:600;
+    }
+    .badge{
+      width:26px;height:26px;border-radius:7px;
+      display:flex;align-items:center;justify-content:center;
+      background:#0b67d0; color:#fff; font-weight:900;
+      font-size:14px;
+    }
+    input[type="checkbox"]{
+      width:20px;height:20px;
+      accent-color: var(--green);
+      cursor:pointer;
+    }
+
+    /* depoimento (etapa 10) */
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      color:#ff6a00;
+      font-weight:900;
+      margin-top:4px;
+      margin-bottom:6px;
+      font-size:15px;
+    }
+    .mini{
+      text-align:center;
+      color:var(--muted);
+      font-size:12.5px;
+      margin-bottom:12px;
+    }
+    .photo{
+      width:100%;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#f8fafc;
+    }
+    .photo img{ width:100%; display:block; }
+    .stars{
+      margin-top:12px;
+      color:#f5b301;
+      font-size:14px;
+      letter-spacing:1px;
+    }
+    .quote{
+      margin-top:8px;
+      font-size:13.5px;
+      color:#374151;
+      line-height:1.45;
+      white-space:pre-line;
+    }
+    .name{
+      margin-top:8px;
+      font-weight:900;
+      font-size:14px;
+    }
+    .city{
+      color:var(--muted);
+      font-size:12.5px;
+      margin-top:2px;
+    }
+
+    /* slider (etapas 11-13) */
+    .toggle{
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      margin:10px 0 10px;
+      background:#f3f4f6;
+      padding:6px;
+      border-radius:999px;
+      width:max-content;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .pill{
+      border:0;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:800;
+      cursor:pointer;
+      background:transparent;
+      color:#111827;
+    }
+    .pill.active{
+      background:var(--green);
+      color:#fff;
+    }
+    .bigval{
+      text-align:center;
+      font-size:52px;
+      font-weight:900;
+      margin:2px 0 2px;
+      letter-spacing:-1px;
+    }
+    .unit{
+      font-size:18px;
+      font-weight:900;
+      margin-left:4px;
+    }
+    .range{
+      width:100%;
+      margin: 0;
+      accent-color: var(--green);
+      height: 8px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Container do slider com preenchimento verde */
+    .range-wrapper {
+      position: relative;
+      width: 100%;
+      height: 8px;
+      margin-top: 8px;
+    }
+    
+    .range-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 8px;
+      background: var(--green);
+      border-radius: 999px 0 0 999px;
+      pointer-events: none;
+      transition: width 0.1s ease;
+      z-index: 0;
+    }
+    
+    /* Track do slider */
+    .range::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 999px;
+    }
+    
+    .range::-moz-range-track {
+      width: 100%;
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 999px;
+    }
+    
+    /* Preenchimento verde progressivo para Firefox */
+    .range::-moz-range-progress {
+      background: var(--green);
+      height: 8px;
+      border-radius: 999px 0 0 999px;
+    }
+    
+    /* Bolinha do slider */
+    .range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 32px;
+      height: 32px;
+      background: var(--green);
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      cursor: grab;
+      box-shadow: 0 2px 8px rgba(21, 162, 79, 0.3);
+      transform: translateY(-20px);
+      position: relative;
+    }
+    
+    .range::-moz-range-thumb {
+      width: 32px;
+      height: 32px;
+      background: var(--green);
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      cursor: grab;
+      box-shadow: 0 2px 8px rgba(21, 162, 79, 0.3);
+      transform: translateY(-12px);
+    }
+    
+    /* Efeito ao arrastar */
+    .range:active::-webkit-slider-thumb {
+      cursor: grabbing;
+      box-shadow: 0 3px 12px rgba(21, 162, 79, 0.5);
+      transform: translateY(-12px) scale(1.1);
+    }
+    
+    .range:active::-moz-range-thumb {
+      cursor: grabbing;
+      box-shadow: 0 3px 12px rgba(21, 162, 79, 0.5);
+      transform: translateY(-12px) scale(1.1);
+    }
+    .range-scale{
+      display:flex;
+      justify-content:space-between;
+      color:#9ca3af;
+      font-size:12px;
+      margin-top:8px;
+    }
+
+    /* escolha simples (etapas 14-16) */
+    .choice-list{ display:flex; flex-direction:column; gap:10px; margin:12px 0 14px; }
+    .choice{
+      border:1px solid #15a24f;
+      border-radius:18px;
+      padding:14px 12px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      cursor:pointer;
+      background:#eefcf3;
+      transition: border-color .15s ease, transform .05s ease, background .12s ease;
+    }
+    .choice:hover{
+      background:#e0f7e9;
+      border-color:#0f8f4a;
+    }
+    .choice:active{ transform:scale(.995); }
+    .choice-left{ display:flex; align-items:center; gap:10px; font-weight:700; font-size:14px; }
+    .emoji{ font-size:20px; width:30px; display:flex; justify-content:center; }
+    .choice.selected{ 
+      border-color: #0f8f4a; 
+      background:#d4f4dd;
+      box-shadow: 0 0 0 3px rgba(10,163,74,.12); 
+    }
+
+    /* etapa 17 loading + carrossel */
+    .loading-top{
+      text-align:center;
+      margin-top:6px;
+      font-size:22px;
+      font-weight:900;
+      line-height:1.2;
+    }
+    .loading-sub{
+      color:var(--muted);
+      font-size:13px;
+      max-width:420px;
+      margin:14px auto 6px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .carousel{
+      max-width:420px;
+      margin:12px auto 0;
+      border-radius:14px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:#f3f4f6;
+      height:300px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .carousel img{ width:100%; display:block; height:auto; }
+    .dots{
+      display:flex;
+      justify-content:center;
+      gap:6px;
+      margin-top:10px;
+    }
+    .dot{
+      width:7px;height:7px;border-radius:999px;background:#d1d5db;
+    }
+    .dot.active{ background: var(--green); }
+    .car-quote{
+      text-align:center;
+      color:#6b7280;
+      font-size:13px;
+      margin-top:10px;
+      font-style:italic;
+    }
+
+    /* etapa 18 IMC card */
+    .h-title{
+      text-align:center;
+      font-size:22px;
+      font-weight:800;
+      line-height:1.2;
+    }
+    .imc-head{
+      text-align:center;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+    .imc-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:#374151;
+      font-size:13px;
+      margin-bottom:8px;
+    }
+    .zone{
+      color:#f59e0b;
+      font-weight:900;
+      display:flex; align-items:center; gap:6px;
+    }
+    .imc-bar{
+      position:relative;
+      height:38px;
+      border-radius:999px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      display:flex;
+    }
+    .seg{ flex:1; }
+    .seg.a{ background:#c7e3ff; }
+    .seg.b{ background:#c9f6d6; }
+    .seg.c{ background:#ffe7a6; }
+    .seg.d{ background:#ffd0d0; }
+    .marker{
+      position:absolute;
+      top:-8px;
+      width:1px;
+      left:50%;
+      height:54px;
+    }
+    .bubble{
+      position:absolute;
+      top:-34px;
+      transform:translateX(-50%);
+      background:#111827;
+      color:#fff;
+      font-size:11px;
+      padding:6px 10px;
+      border-radius:10px;
+      white-space:nowrap;
+    }
+    .bubble:after{
+      content:"";
+      position:absolute;
+      left:50%;
+      bottom:-6px;
+      transform:translateX(-50%);
+      border:6px solid transparent;
+      border-top-color:#111827;
+    }
+    .markerline{
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:3px;
+      height:100%;
+      background:#111827;
+      border-radius:999px;
+      opacity:.25;
+    }
+
+    .block{
+      border-radius:14px;
+      padding:12px 12px;
+      border:1px solid var(--line);
+      margin-top:10px;
+      font-size:13px;
+      line-height:1.4;
+      color:#374151;
+      background:#fff;
+    }
+    .block.warn{ border-left:4px solid #f59e0b; background:#fff7ed; }
+    .block.danger{ border-left:4px solid #ef4444; background:#fff1f2; }
+    .block.info{ border-left:4px solid #2563eb; background:#eff6ff; }
+    .block h4{ margin:0 0 6px; font-size:13px; font-weight:900; }
+    .list{
+      margin:0;
+      padding-left:18px;
+    }
+    .img-bottom{
+      margin-top:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+      background:#f3f4f6;
+      height:200px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:rgba(15,143,74,.75);
+    }
+    .img-bottom img{ width:100%; display:block; height:auto; }
+
+    /* etapa 19 opções com imagem */
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:14px 0 14px;
+    }
+    .optimg{
+      border:1px solid #15a24f;
+      border-radius:14px;
+      overflow:hidden;
+      cursor:pointer;
+      background:#eefcf3;
+      transition:border-color .15s ease, box-shadow .15s ease, transform .05s ease, background .12s ease;
+    }
+    .optimg:hover{
+      background:#e0f7e9;
+      border-color:#0f8f4a;
+    }
+    .optimg:active{ transform:scale(.995); }
+    .optimg.selected{ 
+      border-color: #0f8f4a; 
+      background:#d4f4dd;
+      box-shadow: 0 0 0 3px rgba(10,163,74,.12); 
+    }
+    .optimg img{ width:100%; display:block; }
+    .optimg-placeholder{
+      width:100%;
+      height:150px;
+      background:#f3f4f6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:rgba(15,143,74,.75);
+      font-size:12px;
+    }
+    .optlabel{
+      text-align:center;
+      padding:10px 10px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    /* tela final */
+    .final-title{
+      text-align:center;
+      font-size:28px;
+      font-weight:900;
+      margin-top:8px;
+    }
+    .final-sub{
+      text-align:center;
+      color:var(--muted);
+      margin-top:6px;
+      margin-bottom:12px;
+      font-weight:700;
+    }
+    .video{
+      max-width:420px;
+      margin:0 auto;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:#0f172a;
+      aspect-ratio:9/16;
+      min-height:400px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="wrap">
+      <div class="brand" id="brand"></div>
+
+      <div class="progress-track" aria-label="Progresso do quiz">
+        <div class="progress-bar" id="progress"></div>
+      </div>
+
+      <div id="miniHead" class="mini-head" style="display:none;">
+        <div class="a">Nosso protocolo</div>
+        <div class="b">Resolve isso para você!</div>
+      </div>
+
+      <section id="host"></section>
+    </main>
+  </div>
+
+  <script>
+    // ========== CONFIGURAÇÃO COMPLETA DO QUIZ ==========
+    const steps = [
+      // 1
+      {
+        id:"q1_quilos",
+        headerImage:"",
+        type:"single_arrow",
+        titleHTML:`Quantos quilos você <span class="hl">deseja perder?</span>`,
+        subtitle:`O protocolo Truque do Limão ajuda a eliminar gordura de forma acelerada.`,
+        options:[
+          {value:"ate_5", label:"Até 5 kg"},
+          {value:"6_10", label:"De 6 a 10 kg"},
+          {value:"11_15", label:"De 11 a 15 kg"},
+          {value:"16_20", label:"De 16 a 20 kg"},
+          {value:"mais_20", label:"Mais de 20 kg"},
+        ]
+      },
+
+      // 2
+      {
+        id:"q2_corpo",
+        headerImage:"",
+        type:"single_image_noarrow",
+        titleHTML:`Como você classificaria seu <span class="hl">corpo</span> <span class="hl">hoje?</span>`,
+        subtitle:"",
+        options:[
+          {value:"regular", label:"Regular", img:true},
+          {value:"flacido", label:"Flácido", img:true},
+          {value:"sobrepeso", label:"Sobrepeso", img:true},
+        ]
+      },
+
+      // 3
+      {
+        id:"q3_area",
+        headerImage:"",
+        type:"single_arrow",
+        titleHTML:`Em qual área do seu corpo você gostaria de <span class="hl">reduzir mais gordura?</span>`,
+        subtitle:"",
+        options:[
+          {value:"culotes", label:"Região dos Culotes"},
+          {value:"coxas", label:"Região das Coxas"},
+          {value:"abdomen", label:"Região do Abdômen (barriga)"},
+          {value:"gluteos", label:"Região dos Glúteos"},
+          {value:"bracos", label:"Região dos Braços"},
+        ]
+      },
+
+      // 4
+      {
+        id:"q4_nome",
+        headerImage:"",
+        type:"input_required",
+        titleHTML:`Qual seu nome?`,
+        hint:`Para montar seu plano personalizado, precisamos do seu nome. Fique tranquilo(a), seus dados estão protegidos 👍`,
+        placeholder:"Digite seu nome...",
+        button:"Continuar"
+      },
+
+      // 5
+      {
+        id:"q5_impacto",
+        headerImage:"",
+        type:"single_emoji_noarrow",
+        titleHTML:`Como o seu peso <span class="hl">impacta sua vida?</span>`,
+        subtitle:"",
+        options:[
+          {value:"fotos", emoji:"📷", label:"Evito tirar fotos porque tenho vergonha"},
+          {value:"parceiro", emoji:"💔", label:"Meu parceiro não me olha mais com desejo como antes"},
+          {value:"sociais", emoji:"😟", label:"Evito encontros sociais porque não me sinto bem comigo mesma."},
+          {value:"nenhuma", emoji:"👋", label:"Nenhuma das opções."},
+        ]
+      },
+
+      // 6
+      {
+        id:"q6_aparencia",
+        headerImage:"",
+        type:"single_emoji_arrow",
+        titleHTML:`Você está realmente <span class="hl">feliz</span> com <span class="red">sua aparência?</span>`,
+        subtitle:"",
+        options:[
+          {value:"nao_acima_peso", emoji:"😥", label:"Não, porque me sinto acima do peso"},
+          {value:"sim_saude", emoji:"💔", label:"Sim, mas sei que posso melhorar minha saúde"},
+          {value:"nao_bemestar", emoji:"😟", label:"Não, gostaria de perder peso para melhorar meu bem-estar"},
+        ]
+      },
+
+      // 7
+      {
+        id:"q7_impede",
+        headerImage:"",
+        type:"single_icon_title_desc_arrow",
+        titleHTML:`O que mais te <span class="red">impede</span><br/>de <span class="red">emagrecer?</span>`,
+        subtitle:"",
+        options:[
+          {value:"tempo", emoji:"⏱️", title:"Falta de tempo", desc:"Rotina agitada."},
+          {value:"autocontrole", emoji:"😬", title:"Autocontrole", desc:"Dificuldade em resistir a tentações alimentares."},
+          {value:"financeiro", emoji:"💵", title:"Financeiro", desc:"Achar opções saudáveis mais caras do que alimentos processados."},
+        ]
+      },
+
+      // 8
+      {
+        id:"q8_info",
+        headerImage:"",
+        type:"info_continue",
+        showMiniHead:true,
+        bigTitleHTML:`COMO FUNCIONA O<br/><span class="black">TRUQUE DO LIMÃO?</span>`,
+        imageLabel:`[ RESERVA DE IMAGEM / DIAGRAMA DO EXEMPLO ]`,
+        footHTML:`<span class="g">Truque do Limão</span> age até enquanto você dorme, <span class="r">queimando gordura</span> de forma <span class="g">acelerada!</span>`,
+        button:"Continuar"
+      },
+
+      // 9
+      {
+        id:"q9_beneficios",
+        headerImage:"",
+        type:"checkbox_list",
+        titleHTML:`Quais desses <span class="hl">benefícios</span> você gostaria<br/>de ter?`,
+        subtitle:"👉 Vamos personalizar a sua fórmula para maximizar os resultados.",
+        options:[
+          {value:"emagrecer", label:"Emagrecer sem esforço e sem efeito sanfona"},
+          {value:"sono", label:"Sono mais profundo"},
+          {value:"autoestima", label:"Aumento da autoestima e confiança"},
+          {value:"ansiedade", label:"Redução do estresse e ansiedade"},
+        ],
+        button:"Continuar"
+      },
+
+      // 10
+      {
+        id:"q10_depoimento",
+        headerImage:"",
+        type:"testimonial",
+        sectionTitle:"🔥 Histórias Reais de Transformação!",
+        miniText:"📍 Depoimento: Fernanda – Porto Alegre-RS",
+        stars:"★★★★★",
+        name:"Fernanda Oliveira",
+        city:"Porto Alegre, RS",
+        quote:`Eu já tinha tentado de tudo para emagrecer, mas nada funcionava.
+Depois de incluir a fórmula do Truque do Limão na minha rotina, perdi 11kg sem mudar nada na minha alimentação!
+O mais incrível é que minha fome e ansiedade diminuíram naturalmente!`,
+        button:"Continuar"
+      },
+
+      // 11
+      {
+        id:"q11_peso",
+        headerImage:"",
+        type:"slider_weight",
+        titleHTML:`Qual é o seu <span class="hl">peso atual</span>?`,
+        subtitle:"Estamos quase lá! Vamos ajustar seu plano de acordo com seu corpo.",
+        button:"Continuar"
+      },
+
+      // 12
+      {
+        id:"q12_altura",
+        headerImage:"",
+        type:"slider_height",
+        titleHTML:`Qual é a sua <span class="hl">altura</span>?`,
+        subtitle:"Isso nos ajudará a calcular a quantidade exata do Truque do Limão para seu corpo.",
+        button:"Continuar"
+      },
+
+      // 13
+      {
+        id:"q13_objetivo",
+        headerImage:"",
+        type:"slider_goal",
+        titleHTML:`Qual é o seu <span class="hl">objetivo de peso</span>?`,
+        subtitle:"Isso nos ajudará a personalizar um plano especificamente para você.",
+        button:"Continuar"
+      },
+
+      // 14
+      {
+        id:"q14_rotina",
+        headerImage:"",
+        type:"single_choice",
+        titleHTML:`Como é o seu <span class="hl">dia a dia</span>?`,
+        subtitle:"Sua rotina diária também faz diferença!",
+        options:[
+          {value:"fora_agitada", emoji:"😐", label:"Trabalho fora e tenho uma rotina agitada"},
+          {value:"casa_flexivel", emoji:"😕", label:"Trabalho em casa e tenho uma rotina flexível"},
+          {value:"cuida_familia", emoji:"🥰", label:"Fico em casa cuidando da família"},
+          {value:"outro", emoji:"😐", label:"Outro"},
+        ],
+        button:"Continuar"
+      },
+
+      // 15
+      {
+        id:"q15_sono",
+        headerImage:"",
+        type:"single_choice",
+        titleHTML:`Quantas <span class="hl">horas de sono</span> você tem por noite?`,
+        subtitle:"A qualidade do seu sono impacta diretamente no seu emagrecimento!",
+        options:[
+          {value:"menos_5", emoji:"😐", label:"Menos de 5 horas"},
+          {value:"5_7", emoji:"😕", label:"Entre 5 e 7 horas"},
+          {value:"7_9", emoji:"🥰", label:"Entre 7 e 9 horas"},
+          {value:"mais_9", emoji:"😐", label:"Mais de 9 horas"},
+        ],
+        button:"Continuar"
+      },
+
+      // 16
+      {
+        id:"q16_agua",
+        headerImage:"",
+        type:"single_choice",
+        titleHTML:`Quantos <span class="hl">copos de água</span> você bebe por dia?`,
+        subtitle:"Seu nível de hidratação também influencia na sua perda de peso.",
+        options:[
+          {value:"so_cafe_cha", emoji:"☕", label:"Bebo apenas café ou chá"},
+          {value:"1_2", emoji:"🚰", label:"1-2 copos por dia"},
+          {value:"2_6", emoji:"🚰", label:"2-6 copos por dia"},
+          {value:"mais_6", emoji:"🚰", label:"Mais de 6 copos"},
+        ],
+        button:"Continuar"
+      },
+
+      // 17
+      {
+        id:"q17_loading",
+        headerImage:"",
+        type:"loading_carousel",
+        loadingTitle:`<span style="color:var(--green)">Aguarde</span> enquanto preparamos o<br/>Truque do Limão……`,
+        carouselImages:[
+          "carousel-1.jpg",
+          "carousel-2.jpg",
+          "carousel-3.jpg",
+          "carousel-4.jpg",
+          "carousel-5.jpg",
+        ],
+        carQuote:'"Transformações reais com Truque do Limão. Você também pode conseguir!"'
+      },
+
+      // 18
+      {
+        id:"q18_imc",
+        headerImage:"",
+        type:"imc_result",
+        titleHTML:`Veja como o <span class="hl">Truque do Limão</span> está<br/>transformando vidas e veja os <span class="hl">resultados</span> da<br/>nossa <span class="hl">comunidade</span>!`,
+        button:"Próxima Etapa"
+      },
+
+      // 19
+      {
+        id:"q19_corpo_sonhos",
+        headerImage:"",
+        type:"image_choice",
+        titleHTML:`Qual o <span class="hl">corpo</span> dos sonhos?`,
+        subtitle:"Escolha a opção abaixo:",
+        options:[
+          {value:"em_forma", label:"Em forma", image:"corpo-em-forma.jpg"},
+          {value:"natural", label:"Natural", image:"corpo-natural.jpg"},
+        ],
+        button:"Continuar"
+      }
+    ];
+
+    // ========== STATE ==========
+    const state = {
+      i: 0,
+      answers: {},
+      weightKg: 70,
+      heightCm: 170,
+      goalKg: 70,
+      weightUnit: "kg",
+      heightUnit: "cm",
+      goalUnit: "kg",
+    };
+
+    const host = document.getElementById("host");
+    const progress = document.getElementById("progress");
+    const brand = document.getElementById("brand");
+    const miniHead = document.getElementById("miniHead");
+
+    // ========== HELPERS ==========
+    const kgToLb = kg => Math.round(kg * 2.2046226218);
+    const lbToKg = lb => lb / 2.2046226218;
+    const cmToIn = cm => Math.round(cm / 2.54);
+    const inToCm = inch => inch * 2.54;
+
+    function getUserName(){
+      return state.answers.q4_nome || "Amigo(a)";
+    }
+
+    function setProgress(){
+      const pct = Math.round(((state.i + 1) / steps.length) * 100);
+      progress.style.width = pct + "%";
+    }
+
+    function renderBrand(step){
+      if(step.headerImage){
+        brand.innerHTML = `<img src="${step.headerImage}" alt="Topo do quiz">`;
+      }else{
+        brand.innerHTML = `<img src="img/topo.png" alt="Truque do Limão">`;
+      }
+    }
+
+    function next(){
+      if(state.i < steps.length - 1){
+        state.i++;
+        render();
+      }else{
+        // FIM - tela final
+        progress.style.width = "100%";
+        miniHead.style.display = "none";
+        renderBrand({headerImage:""});
+        
+        host.innerHTML = `
+          <div class="final-title">${getUserName()}, seu protocolo foi gerado com sucesso!</div>
+          <div class="final-sub">Por favor assista o vídeo abaixo para liberar</div>
+          <div class="video"><vturb-smartplayer id="vid-695f2058766bc0a605c5e7fa" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer></div>
+        `;
+        
+        // ═══════════════════════════════════════════════════════════════
+        // 🎥 TROCAR VÍDEO VTURB
+        // ═══════════════════════════════════════════════════════════════
+        // Para trocar o vídeo, substitua "695f2058766bc0a605c5e7fa" 
+        // em 2 lugares:
+        // 1. Acima: id="vid-695f2058766bc0a605c5e7fa"
+        // 2. Abaixo: players/695f2058766bc0a605c5e7fa/v4/player.js
+        // ═══════════════════════════════════════════════════════════════
+        var s=document.createElement("script");s.src="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/695f2058766bc0a605c5e7fa/v4/player.js",s.async=!0,document.head.appendChild(s);
+        
+        console.log("RESPOSTAS FINAIS:", state.answers);
+        window.scrollTo({top:0, behavior:"smooth"});
+      }
+    }
+
+    // ========== RENDER PRINCIPAL ==========
+    function render(){
+      const step = steps[state.i];
+      setProgress();
+      renderBrand(step);
+
+      miniHead.style.display = step.showMiniHead ? "block" : "none";
+
+      const header = (step.titleHTML || step.bigTitleHTML) ? `
+        ${step.titleHTML ? `<h1>${step.titleHTML}</h1>` : ``}
+        ${step.subtitle !== undefined ? `<p class="subtitle">${step.subtitle || ""}</p>` : ``}
+      ` : ``;
+
+      // ========== TIPO: single_arrow ==========
+      if(step.type === "single_arrow"){
+        host.innerHTML = header + `
+          <div class="options">
+            ${step.options.map(o=>`
+              <button class="opt" type="button" data-val="${o.value}">
+                <span class="label">${o.label}</span>
+                <span class="arrow">›</span>
+              </button>
+            `).join("")}
+          </div>
+        `;
+        host.querySelectorAll(".opt").forEach(btn=>{
+          btn.addEventListener("click", ()=>{
+            state.answers[step.id] = btn.dataset.val;
+            next();
+          });
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: single_image_noarrow ==========
+      if(step.type === "single_image_noarrow"){
+        const imageMap = {
+          regular: "img/regular.png",
+          flacido: "img/flacido.png",
+          sobrepeso: "img/sobrepeso.png"
+        };
+        
+        host.innerHTML = header + `
+          <div class="options">
+            ${step.options.map(o=>`
+              <button class="opt no-arrow" type="button" data-val="${o.value}">
+                <span class="left-ico">
+                  ${o.img ? `<img alt="${o.label}" src="${imageMap[o.value]}" />` : ``}
+                </span>
+                <span class="label" style="font-weight:800;">${o.label}</span>
+              </button>
+            `).join("")}
+          </div>
+        `;
+        host.querySelectorAll(".opt").forEach(btn=>{
+          btn.addEventListener("click", ()=>{
+            state.answers[step.id] = btn.dataset.val;
+            next();
+          });
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: input_required ==========
+      if(step.type === "input_required"){
+        host.innerHTML = `
+          <div class="center-block">
+            <h1>${step.titleHTML}</h1>
+            <input class="input" id="nameInp" placeholder="${step.placeholder || ""}" />
+            <div class="hint">${step.hint || ""}</div>
+            <button class="btn" id="goBtn" disabled>${step.button || "Continuar"}</button>
+          </div>
+        `;
+        const inp = document.getElementById("nameInp");
+        const btn = document.getElementById("goBtn");
+
+        function sync(){
+          const v = (inp.value || "").trim();
+          btn.disabled = v.length === 0;
+        }
+        inp.addEventListener("input", sync);
+        inp.addEventListener("keydown", (e)=>{
+          if(e.key === "Enter" && !btn.disabled) btn.click();
+        });
+
+        btn.addEventListener("click", ()=>{
+          state.answers[step.id] = (inp.value || "").trim();
+          next();
+        });
+
+        inp.focus();
+        sync();
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: single_emoji_noarrow ==========
+      if(step.type === "single_emoji_noarrow"){
+        host.innerHTML = header + `
+          <div class="options">
+            ${step.options.map(o=>`
+              <button class="opt no-arrow" type="button" data-val="${o.value}">
+                <span class="left-ico emoji">${o.emoji || "•"}</span>
+                <span class="label">${o.label}</span>
+              </button>
+            `).join("")}
+          </div>
+        `;
+        host.querySelectorAll(".opt").forEach(btn=>{
+          btn.addEventListener("click", ()=>{
+            state.answers[step.id] = btn.dataset.val;
+            next();
+          });
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: single_emoji_arrow ==========
+      if(step.type === "single_emoji_arrow"){
+        host.innerHTML = header + `
+          <div class="options">
+            ${step.options.map(o=>`
+              <button class="opt" type="button" data-val="${o.value}">
+                <span class="left-ico emoji">${o.emoji || "•"}</span>
+                <span class="label">${o.label}</span>
+                <span class="arrow">›</span>
+              </button>
+            `).join("")}
+          </div>
+        `;
+        host.querySelectorAll(".opt").forEach(btn=>{
+          btn.addEventListener("click", ()=>{
+            state.answers[step.id] = btn.dataset.val;
+            next();
+          });
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: single_icon_title_desc_arrow ==========
+      if(step.type === "single_icon_title_desc_arrow"){
+        host.innerHTML = header + `
+          <div class="options">
+            ${step.options.map(o=>`
+              <button class="opt" type="button" data-val="${o.value}">
+                <span class="left-ico emoji">${o.emoji || "•"}</span>
+                <span class="label">
+                  <div class="card-title">${o.title || ""}</div>
+                  <div class="card-desc">${o.desc || ""}</div>
+                </span>
+                <span class="arrow">›</span>
+              </button>
+            `).join("")}
+          </div>
+        `;
+        host.querySelectorAll(".opt").forEach(btn=>{
+          btn.addEventListener("click", ()=>{
+            state.answers[step.id] = btn.dataset.val;
+            next();
+          });
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: info_continue ==========
+      if(step.type === "info_continue"){
+        host.innerHTML = `
+          <div style="margin-top:6px;"></div>
+          <div class="big-title">${step.bigTitleHTML || ""}</div>
+          <div class="mid-image">
+            <img src="img/diagrama.png" alt="Como funciona o Truque do Limão" style="width:100%;height:100%;object-fit:contain;border-radius:18px;" />
+          </div>
+          <div class="footline">${step.footHTML || ""}</div>
+          <button class="btn" id="infoBtn">${step.button || "Continuar"}</button>
+        `;
+        document.getElementById("infoBtn").addEventListener("click", ()=>{
+          state.answers[step.id] = "ok";
+          next();
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: checkbox_list ==========
+      if(step.type === "checkbox_list"){
+        host.innerHTML = header + `
+          <div class="checklist">
+            ${step.options.map(o=>`
+              <label class="check-row">
+                <span class="check-left"><span class="badge">→</span>${o.label}</span>
+                <input type="checkbox" name="benefits" value="${o.value}" />
+              </label>
+            `).join("")}
+          </div>
+          <button class="btn" id="checkBtn" disabled>${step.button}</button>
+        `;
+
+        const checkBtn = document.getElementById("checkBtn");
+        const checklist = host.querySelector(".checklist");
+
+        checklist.addEventListener("change", ()=>{
+          const checked = Array.from(host.querySelectorAll('input[name="benefits"]:checked')).map(i=>i.value);
+          state.answers[step.id] = checked;
+          checkBtn.disabled = checked.length === 0;
+        });
+
+        checkBtn.addEventListener("click", ()=> next());
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: testimonial ==========
+      if(step.type === "testimonial"){
+        host.innerHTML = `
+          <div class="section-title">${step.sectionTitle || ""}</div>
+          <div class="mini">${step.miniText || ""}</div>
+          <div class="photo">
+            <img src="img/antesedepois.jpg" alt="Antes e depois da Fernanda" />
+          </div>
+          <div class="stars">${step.stars || ""}</div>
+          <div class="name">${step.name || ""}</div>
+          <div class="city">${step.city || ""}</div>
+          <div class="quote">${step.quote || ""}</div>
+          <div style="height:14px"></div>
+          <button class="btn" id="testBtn">${step.button}</button>
+        `;
+        document.getElementById("testBtn").addEventListener("click", ()=>{
+          state.answers[step.id] = "viewed";
+          next();
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: slider_weight ==========
+      if(step.type === "slider_weight"){
+        host.innerHTML = `
+          <h1>${step.titleHTML}</h1>
+          <p class="subtitle">${step.subtitle || ""}</p>
+          <div class="toggle">
+            <button class="pill active" id="wKg">kg</button>
+            <button class="pill" id="wLb">lb</button>
+          </div>
+          <div class="bigval"><span id="weightVal">70</span><span class="unit" id="weightUnit">kg</span></div>
+          <div class="range-wrapper">
+            <div class="range-fill" id="weightFill"></div>
+            <input class="range" id="weightRange" type="range" min="40" max="150" value="70" />
+          </div>
+          <div class="range-scale"><span>40</span><span>95</span><span>150</span></div>
+          <div class="hint">Arraste para ajustar</div>
+          <div style="height:14px"></div>
+          <button class="btn" id="weightBtn">${step.button}</button>
+        `;
+
+        const wKg = document.getElementById("wKg");
+        const wLb = document.getElementById("wLb");
+        const weightVal = document.getElementById("weightVal");
+        const weightUnit = document.getElementById("weightUnit");
+        const weightRange = document.getElementById("weightRange");
+        const weightFill = document.getElementById("weightFill");
+
+        function updateWeightFill(){
+          const min = parseFloat(weightRange.min);
+          const max = parseFloat(weightRange.max);
+          const val = parseFloat(weightRange.value);
+          const percentage = ((val - min) / (max - min)) * 100;
+          weightFill.style.width = percentage + '%';
+        }
+
+        function renderWeight(){
+          if(state.weightUnit === "kg"){
+            weightUnit.textContent = "kg";
+            const v = Math.round(state.weightKg);
+            weightVal.textContent = v;
+            weightRange.min = 40;
+            weightRange.max = 150;
+            weightRange.value = v;
+          } else {
+            weightUnit.textContent = "lb";
+            const lb = kgToLb(state.weightKg);
+            weightVal.textContent = lb;
+            weightRange.min = 88;
+            weightRange.max = 331;
+            weightRange.value = lb;
+          }
+          wKg.classList.toggle("active", state.weightUnit==="kg");
+          wLb.classList.toggle("active", state.weightUnit==="lb");
+          updateWeightFill();
+        }
+
+        wKg.addEventListener("click", ()=> { state.weightUnit="kg"; renderWeight(); });
+        wLb.addEventListener("click", ()=> { state.weightUnit="lb"; renderWeight(); });
+
+        weightRange.addEventListener("input", ()=>{
+          const v = Number(weightRange.value);
+          if(state.weightUnit==="kg"){
+            state.weightKg = v;
+          } else {
+            state.weightKg = lbToKg(v);
+          }
+          renderWeight();
+        });
+
+        document.getElementById("weightBtn").addEventListener("click", ()=>{
+          state.answers[step.id] = Math.round(state.weightKg);
+          next();
+        });
+
+        renderWeight();
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: slider_height ==========
+      if(step.type === "slider_height"){
+        host.innerHTML = `
+          <h1>${step.titleHTML}</h1>
+          <p class="subtitle">${step.subtitle || ""}</p>
+          <div class="toggle">
+            <button class="pill active" id="hCm">cm</button>
+            <button class="pill" id="hPol">pol</button>
+          </div>
+          <div class="bigval"><span id="heightVal">170</span><span class="unit" id="heightUnit">cm</span></div>
+          <div class="range-wrapper">
+            <div class="range-fill" id="heightFill"></div>
+            <input class="range" id="heightRange" type="range" min="100" max="210" value="170" />
+          </div>
+          <div class="range-scale"><span>100</span><span>155</span><span>210</span></div>
+          <div class="hint">Arraste para ajustar</div>
+          <div style="height:14px"></div>
+          <button class="btn" id="heightBtn">${step.button}</button>
+        `;
+
+        const hCm = document.getElementById("hCm");
+        const hPol = document.getElementById("hPol");
+        const heightVal = document.getElementById("heightVal");
+        const heightUnit = document.getElementById("heightUnit");
+        const heightRange = document.getElementById("heightRange");
+        const heightFill = document.getElementById("heightFill");
+
+        function updateHeightFill(){
+          const min = parseFloat(heightRange.min);
+          const max = parseFloat(heightRange.max);
+          const val = parseFloat(heightRange.value);
+          const percentage = ((val - min) / (max - min)) * 100;
+          heightFill.style.width = percentage + '%';
+        }
+
+        function renderHeight(){
+          if(state.heightUnit === "cm"){
+            heightUnit.textContent = "cm";
+            const v = Math.round(state.heightCm);
+            heightVal.textContent = v;
+            heightRange.min = 100;
+            heightRange.max = 210;
+            heightRange.value = v;
+          } else {
+            heightUnit.textContent = "pol";
+            const inch = cmToIn(state.heightCm);
+            heightVal.textContent = inch;
+            heightRange.min = 39;
+            heightRange.max = 83;
+            heightRange.value = inch;
+          }
+          hCm.classList.toggle("active", state.heightUnit==="cm");
+          hPol.classList.toggle("active", state.heightUnit==="pol");
+          updateHeightFill();
+        }
+
+        hCm.addEventListener("click", ()=> { state.heightUnit="cm"; renderHeight(); });
+        hPol.addEventListener("click", ()=> { state.heightUnit="pol"; renderHeight(); });
+
+        heightRange.addEventListener("input", ()=>{
+          const v = Number(heightRange.value);
+          if(state.heightUnit==="cm"){
+            state.heightCm = v;
+          } else {
+            state.heightCm = inToCm(v);
+          }
+          renderHeight();
+        });
+
+        document.getElementById("heightBtn").addEventListener("click", ()=>{
+          state.answers[step.id] = Math.round(state.heightCm);
+          next();
+        });
+
+        renderHeight();
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: slider_goal ==========
+      if(step.type === "slider_goal"){
+        host.innerHTML = `
+          <h1>${step.titleHTML}</h1>
+          <p class="subtitle">${step.subtitle || ""}</p>
+          <div class="toggle">
+            <button class="pill active" id="gKg">kg</button>
+            <button class="pill" id="gLb">lb</button>
+          </div>
+          <div class="bigval"><span id="goalVal">70</span><span class="unit" id="goalUnit">kg</span></div>
+          <div class="subtitle" style="margin-top:0">Meta de peso</div>
+          <div class="range-wrapper">
+            <div class="range-fill" id="goalFill"></div>
+            <input class="range" id="goalRange" type="range" min="40" max="120" value="70" />
+          </div>
+          <div class="range-scale"><span>40</span><span>80</span><span>120</span></div>
+          <div class="hint">Arraste para ajustar</div>
+          <div style="height:14px"></div>
+          <button class="btn" id="goalBtn">${step.button}</button>
+        `;
+
+        const gKg = document.getElementById("gKg");
+        const gLb = document.getElementById("gLb");
+        const goalVal = document.getElementById("goalVal");
+        const goalUnit = document.getElementById("goalUnit");
+        const goalRange = document.getElementById("goalRange");
+        const goalFill = document.getElementById("goalFill");
+
+        function updateGoalFill(){
+          const min = parseFloat(goalRange.min);
+          const max = parseFloat(goalRange.max);
+          const val = parseFloat(goalRange.value);
+          const percentage = ((val - min) / (max - min)) * 100;
+          goalFill.style.width = percentage + '%';
+        }
+
+        function renderGoal(){
+          if(state.goalUnit === "kg"){
+            goalUnit.textContent = "kg";
+            const v = Math.round(state.goalKg);
+            goalVal.textContent = v;
+            goalRange.min = 40;
+            goalRange.max = 120;
+            goalRange.value = v;
+          } else {
+            goalUnit.textContent = "lb";
+            const lb = kgToLb(state.goalKg);
+            goalVal.textContent = lb;
+            goalRange.min = 88;
+            goalRange.max = 265;
+            goalRange.value = lb;
+          }
+          gKg.classList.toggle("active", state.goalUnit==="kg");
+          gLb.classList.toggle("active", state.goalUnit==="lb");
+          updateGoalFill();
+        }
+
+        gKg.addEventListener("click", ()=> { state.goalUnit="kg"; renderGoal(); });
+        gLb.addEventListener("click", ()=> { state.goalUnit="lb"; renderGoal(); });
+
+        goalRange.addEventListener("input", ()=>{
+          const v = Number(goalRange.value);
+          if(state.goalUnit==="kg"){
+            state.goalKg = v;
+          } else {
+            state.goalKg = lbToKg(v);
+          }
+          renderGoal();
+        });
+
+        document.getElementById("goalBtn").addEventListener("click", ()=>{
+          state.answers[step.id] = Math.round(state.goalKg);
+          next();
+        });
+
+        renderGoal();
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: single_choice ==========
+      if(step.type === "single_choice"){
+        host.innerHTML = header + `
+          <div class="choice-list">
+            ${step.options.map(o=>`
+              <div class="choice" data-value="${o.value}">
+                <div class="choice-left"><span class="emoji">${o.emoji || "•"}</span> ${o.label}</div>
+                <div class="arrow">›</div>
+              </div>
+            `).join("")}
+          </div>
+        `;
+
+        host.querySelectorAll(".choice").forEach(el=>{
+          el.addEventListener("click", ()=>{
+            host.querySelectorAll(".choice").forEach(c=>c.classList.remove("selected"));
+            el.classList.add("selected");
+            state.answers[step.id] = el.dataset.value;
+            setTimeout(()=> next(), 300);
+          });
+        });
+
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: loading_carousel ==========
+      if(step.type === "loading_carousel"){
+        host.innerHTML = `
+          <div class="loading-top">${step.loadingTitle || ""}</div>
+          <div class="loading-sub">
+            <span style="color:var(--muted);font-weight:700;">Carregando…</span>
+            <span style="color:var(--muted);font-weight:900;"><span id="loadPct">0</span>%</span>
+          </div>
+          <div class="progress-track" style="max-width:420px;margin:0 auto 12px;">
+            <div class="progress-bar" id="loadBar" style="width:0%;"></div>
+          </div>
+          <div class="carousel">
+            <img id="carImg" src="img/imagem1.png" alt="Transformação" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="dots" id="dots"></div>
+          <div class="car-quote">${step.carQuote || ""}</div>
+        `;
+
+        const pctEl = document.getElementById("loadPct");
+        const barEl = document.getElementById("loadBar");
+        const dotsEl = document.getElementById("dots");
+        const imgEl = document.getElementById("carImg");
+
+        const imgs = [
+          "img/imagem1.png",
+          "img/imagem2.png",
+          "img/imagem3.png",
+          "img/imagem4.png"
+        ];
+        
+        dotsEl.innerHTML = imgs.map((_,i)=>`<div class="dot${i===0?' active':''}"></div>`).join("");
+        const dots = Array.from(dotsEl.querySelectorAll(".dot"));
+
+        let idx = 0;
+        const carInterval = setInterval(()=>{
+          idx = (idx + 1) % imgs.length;
+          imgEl.src = imgs[idx];
+          dots.forEach((d,i)=> d.classList.toggle("active", i===idx));
+        }, 1500);
+
+        const totalMs = 6000;
+        const start = performance.now();
+
+        function tick(now){
+          const t = Math.min(1, (now - start) / totalMs);
+          const pct = Math.round(t * 100);
+          pctEl.textContent = pct;
+          barEl.style.width = pct + "%";
+
+          if(t < 1){
+            requestAnimationFrame(tick);
+          } else {
+            clearInterval(carInterval);
+            state.answers[step.id] = "loaded";
+            next();
+          }
+        }
+        requestAnimationFrame(tick);
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: imc_result ==========
+      if(step.type === "imc_result"){
+        const imc = state.weightKg / Math.pow(state.heightCm/100, 2);
+        const imcFixed = (Math.round(imc * 100) / 100).toFixed(2);
+
+        const min = 16, max = 40;
+        const clamped = Math.max(min, Math.min(max, imc));
+        const pct = (clamped - min) / (max - min);
+
+        host.innerHTML = `
+          <div class="h-title" style="font-size:18px;">${step.titleHTML}</div>
+          <div style="height:10px"></div>
+
+          <div class="imc-head">Índice de Massa Corporal (IMC)</div>
+          <div class="imc-row">
+            <span>Seu IMC é <b>${imcFixed}</b></span>
+            <span class="zone">⚠ Zona de Alerta</span>
+          </div>
+
+          <div class="imc-bar">
+            <div class="seg a"></div>
+            <div class="seg b"></div>
+            <div class="seg c"></div>
+            <div class="seg d"></div>
+            <div class="marker" style="left:${pct*100}%">
+              <div class="bubble">Você está aqui!</div>
+              <div class="markerline"></div>
+            </div>
+          </div>
+
+          <div class="imc-row" style="margin-top:8px;color:#9ca3af;font-weight:800;">
+            <span>Abaixo do Peso</span><span>Normal</span><span>Sobrepeso</span><span>Obesidade</span>
+          </div>
+
+          <div class="block warn">
+            <h4>⚠ Seu metabolismo pode estar te sabotando sem que você perceba!</h4>
+            Mesmo estando no peso normal, seu corpo pode estar retendo toxinas e trabalhando de forma mais lenta,
+            dificultando a queima de gordura e deixando você com menos energia.
+          </div>
+
+          <div class="block danger">
+            <h4>❌ Alguns sinais de alerta:</h4>
+            <ul class="list">
+              <li>Metabolismo lento e dificuldade para emagrecer mesmo comendo pouco.</li>
+              <li>Cansaço constante e sensação de inchaço.</li>
+              <li>Acúmulo de gordura em áreas específicas do corpo, principalmente na barriga.</li>
+            </ul>
+          </div>
+
+          <div class="block info">
+            <h4>🔹 Com o Truque do Limão, seu corpo acelera a queima de gordura naturalmente!</h4>
+            A combinação ideal de ingredientes pode ativar seu metabolismo, reduzir a retenção de líquidos e aumentar sua disposição.
+            <div style="height:8px"></div>
+            <b>Descubra agora como o Truque do Limão pode transformar seu corpo!</b>
+          </div>
+
+          <div style="text-align:center;font-weight:900;margin-top:12px;">Veja a transformação da Silvia!</div>
+          <div class="img-bottom">
+            <img src="img/silva.jpg" alt="Transformação da Silvia" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+
+          <div style="height:14px"></div>
+          <button class="btn" id="imcBtn">${step.button}</button>
+        `;
+
+        document.getElementById("imcBtn").addEventListener("click", ()=>{
+          state.answers[step.id] = {imc: imcFixed};
+          next();
+        });
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      // ========== TIPO: image_choice ==========
+      if(step.type === "image_choice"){
+        host.innerHTML = header + `
+          <div class="grid2">
+            <div class="optimg" data-value="em_forma">
+              <img src="img/forma.png" alt="Em forma" />
+              <div class="optlabel">Em forma</div>
+            </div>
+            <div class="optimg" data-value="natural">
+              <img src="img/natural.png" alt="Natural" />
+              <div class="optlabel">Natural</div>
+            </div>
+          </div>
+        `;
+
+        host.querySelectorAll(".optimg").forEach(opt=>{
+          opt.addEventListener("click", ()=>{
+            host.querySelectorAll(".optimg").forEach(o=>o.classList.remove("selected"));
+            opt.classList.add("selected");
+            state.answers[step.id] = opt.dataset.value;
+            setTimeout(()=> next(), 300);
+          });
+        });
+
+        window.scrollTo({top:0, behavior:"smooth"});
+        return;
+      }
+
+      host.innerHTML = `<p class="subtitle">Tipo não implementado: ${step.type}</p>`;
+    }
+
+    // ========== INICIALIZAÇÃO ==========
+    render();
+  </script>
+</body>
+</html>
