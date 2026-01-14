@@ -42,6 +42,55 @@
   </noscript>
   -->
 
+  <script>
+  // ALTERE O LINK PARA A PÁGINA DE REDIRECIONAMENTO
+  const link = 'https://go.perfectpay.com.br/PPU38CQ4FUE/?src=saidadapv';
+  
+  function setBackRedirect(url) {
+    // Preserva parâmetros da URL atual
+    let urlBackRedirect = url.trim();
+    const currentParams = document.location.search.replace('?', '');
+    
+    if (currentParams) {
+      urlBackRedirect += (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') + currentParams;
+    }
+    
+    // Adiciona múltiplas entradas no histórico
+    if (window.history && window.history.pushState) {
+      // Adiciona entradas extras no histórico
+      for (let i = 0; i < 3; i++) {
+        history.pushState(null, '', location.href);
+      }
+      
+      // Event listener para detectar o botão voltar
+      window.addEventListener('popstate', function(e) {
+        // Previne o comportamento padrão
+        history.pushState(null, '', location.href);
+        
+        // Redireciona
+        setTimeout(function() {
+          window.location.href = urlBackRedirect;
+        }, 10);
+      }, false);
+      
+      // Suporte adicional para iOS
+      window.addEventListener('pageshow', function(e) {
+        if (e.persisted) {
+          history.pushState(null, '', location.href);
+        }
+      });
+    }
+  }
+  
+  // Executa quando o DOM estiver pronto
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setBackRedirect(link);
+    });
+  } else {
+    setBackRedirect(link);
+  }
+
   <!-- ========== GOOGLE TAG MANAGER - COLE SEU CÓDIGO AQUI ========== -->
   <!--
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1880,3 +1929,4 @@ O mais incrível é que minha fome e ansiedade diminuíram naturalmente!`,
 </body>
 
 </html>
+
