@@ -798,9 +798,9 @@
       width: 100%;
       margin: 0 auto;
       border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      background: #0f172a;
+      overflow: visible;
+      border: none;
+      background: transparent;
       position: relative;
     }
 
@@ -811,11 +811,14 @@
       max-width: 100% !important;
       aspect-ratio: 9/16;
       margin: 0 !important;
+      border-radius: 14px;
+      overflow: visible;
     }
 
     .video iframe {
       width: 100% !important;
       height: 100% !important;
+      border: none;
       border-radius: 14px;
     }
 
@@ -824,6 +827,7 @@
       display: block !important;
       width: 100% !important;
       max-width: 100% !important;
+      background: transparent !important;
     }
 
     vturb-smartplayer > div,
@@ -831,6 +835,7 @@
       width: 100% !important;
       height: auto !important;
       aspect-ratio: 9/16 !important;
+      border: none !important;
     }
   </style>
 </head>
